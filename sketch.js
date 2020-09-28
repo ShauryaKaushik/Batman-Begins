@@ -24,8 +24,7 @@ function setup(){
 
     createCanvas(400,700);
     umbrella = new Umbrella(200,500);
-
-    //creating drops
+    
     if(frameCount % 150 === 0){
 
         for(var i=0; i<maxDrops; i++){
@@ -40,7 +39,6 @@ function draw(){
     Engine.update(engine);
     background(0); 
 
-    //creating thunder
     rand = Math.round(random(1,4));
     if(frameCount%80===0){
         thunderCreatedFrame=frameCount;
@@ -64,8 +62,7 @@ function draw(){
     }
 
     umbrella.display();
-
-    //displaying rain drops
+    
     for(var i = 0; i<maxDrops; i++){
         drops[i].showDrop();
         drops[i].updateY()
